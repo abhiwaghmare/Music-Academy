@@ -1,9 +1,10 @@
-import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+
 
 export default function Home() {
   return (
-    <div className="text-center text-3xl mt-8 font-semibold ">
-        <Navbar />
+    <div className=" ">
+        <HeroSection />
    </div>
   );
 }

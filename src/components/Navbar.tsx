@@ -4,16 +4,6 @@ import { HoveredLink, Menu, MenuItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export function NavbarDemo() {
-  return (
-    <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2" />
-      <p className="text-black dark:text-white">
-        The Navbar will show on top of the page
-      </p>
-    </div>
-  );
-}
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
@@ -31,12 +21,14 @@ function Navbar({ className }: { className?: string }) {
         </Link>
         <MenuItem setActive={setActive} active={active} item="Our Courses">
           <div className="flex flex-col space-y-4 text-sm">
+          <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/courses">All Courses</HoveredLink>
             <HoveredLink href="/courses">Basic Music Theory</HoveredLink>
             <HoveredLink href="/courses">
               Advanced Composition
             </HoveredLink>
             <HoveredLink href="/courses">Music Production</HoveredLink>
+            </div>
           </div>
         </MenuItem>
 
